@@ -14,29 +14,26 @@
 h1{
     font-size: large;
 }
-p {
+p{
     font-size: small;
 }
-h3 {
-    font-family: "Raleway";
+h3{
     font-weight: bold;
 }
 /*Header*/
 header{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
     padding: 40px 0px;
 }
-.headernavlink{
-    padding-top: 30px;
+.headerNavLink{
+    padding: 32px;
+    text-align: center;
 }
-.far{
-    color: #0065FC;
-}
-.navigation{
+nav{
     display: flex;
+    align-items: center;
 }
 nav a{
     font-size: 0.9em;
@@ -49,24 +46,27 @@ a{
     color: black;
     font-size: normal;
 }
-a:hover{
-    text-decoration: #0065FC;
-    color: #0065FC;
-}
 header nav a{
     margin-left: 20px;
 }
 header nav{
     display: flex;
     align-items: center;
-}
-.headernavlink a:hover{
-    border-top: 3px solid #0065FC;
+    justify-content: flex-end;
 }
 .headersignup{
+    display: flex;
+    margin-left: 20px;
+}
+.headernavlink a:hover{
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
     color: #0065FC;
-    font-weight: bold;
-    margin-right: 10px;
+}
+.headersignup a:hover{
+    border-top: 3px transparent solid;
+    border-bottom: 3px transparent solid;
+    color: #0065FC;
 }
 
 /*Main title*/
@@ -167,7 +167,6 @@ header nav{
 .fa-dog{
     color: #0065FC;
     font-size: 1.5em;
-    
 }
 h3{
     font-size: small;
@@ -180,6 +179,7 @@ h3{
 .filter-button:hover{
     text-decoration: underline;
     color: #0065FC;
+    transform: scale(1.015);
 }
 .fas.fa-info-circle{
     color: black;
@@ -188,21 +188,21 @@ h3{
 #accomodations{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     margin-bottom: 56px;
+    gap: 15px;
 }
 .title-accomodations-in-Marseille{
     margin: 0px;
     font-size: large;
     margin-bottom: 21px;
 }
-#accomodations-in-Marseille{
+.accomodations-in-Marseille{
     background-color: #F2F2F2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-content: space-between;
     border-radius: 20px;
     padding: 44px 36px 44px 36px;
     max-width: 805px;
@@ -212,11 +212,13 @@ h3{
     flex-direction: row;
     flex-wrap: wrap;
     margin-bottom: 60px;
-    gap: 15px;
 }
 .box-card-link{
     flex-grow: 1;
-    display: block;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    gap: 15px;
 }
 .box-card{
     border: 3px solid white;
@@ -247,6 +249,7 @@ h3{
 }
 .content-prices{
     padding-bottom: 11px;
+    color: black;
 }
 .accomodations-rating{
     padding-bottom: 11px;
@@ -254,6 +257,7 @@ h3{
 .accomodations-content h3{
     font-weight: bold;
     font-style: normal;
+    color: black;
 }
 .fas.fa-star.grey-star{
     color: grey;
@@ -262,10 +266,11 @@ h3{
 .most-popular-title{
     font-size: large;
     margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
 }
 .fas.fa-chart-line{
     color: black;
-
 }
 #container-most-popular{
     background-color: #f2f2f2;
@@ -273,7 +278,6 @@ h3{
     flex-flow: column wrap;
     border-radius: 20px;
     padding: 45px 38px 31px 45px;
-    max-width: 345px;
 }
 .most-popular-accomodations{
     display: flex;
@@ -284,10 +288,9 @@ h3{
     border: 3px solid white;
     border-radius: 20px;
     display: flex;
+    flex-flow: column wrap;
     background-color: white;
     padding: 6px 58px 6px 6px;
-    max-width: 284px;
-    max-height: 135px;
     margin-bottom: 29px;
 }
 .popular-photos{
@@ -297,16 +300,18 @@ h3{
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
-.ccomodations-popular-content{
+.accomodations-popular-content{
     padding: 7px 0px 7px 20px;
     display: flex;
     flex-direction: column;
 }
 .popular-content-title{
     padding-bottom: 14px;
+    color: black;
 }
 .popular-content-prices{
     padding-bottom: 30px;
+    color: black;
 }
 .popular-accomodations-rating{
     max-width: 94px;
@@ -316,57 +321,31 @@ h3{
 #activities-in-Marseille{
     background-color: white;
     display: flex;
-    flex-direction:column;
-    flex-wrap: wrap;
-    margin-bottom: 60px;
-    max-width: 1350px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 56px;
+    gap: 15px; 
 }
 .activities-title{
     margin-bottom: 27px;
     font-size: large;
 }
-.activities{
+.cols{
+    flex-grow: 1;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-flow: row wrap;
+    height: 100%;
 }
-.div:nth-child(activitie2,activitie3, activitie5,activitie6){
+.col-1{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
 }
-.one,
-.two,
-.three,
-.four,
-.five,
-.six{
-    box-shadow: 0 0 20px #0000002e;
-    padding: 0px 0px 20px 0px;
-    border-radius: 20px;
-    margin: 0px 0px 20px 0px;
+.activitie-card{
+    flex-grow: 1;
 }
-.photo-activitie1,
-.photo-activitie2,
-.photo-activitie3,
-.photo-activitie4,
-.photo-activitie5,
-.photo-activitie6{
-    background-size: 100% 100%;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    padding: 0px 0px 22px 0px;
-}
-.activitie-card1,
-.activitie-card2,
-.activitie-card3,
-.activitie-card4,
-.activitie-card5,
-.activitie-card6{
-    object-fit: cover;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-}
+
 /* Footer */
 .footer{
     background-color: #F2F2F2;
