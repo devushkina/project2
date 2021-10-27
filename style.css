@@ -24,30 +24,46 @@ h3{
 nav{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: wrap;
+    align-items:center;
     margin-bottom: 20px;
 }
 #logo{
-    margin-left: 20px;
+    margin-left: auto;
 }
-.accomodations-activities{
+.accomodation-activities{
     display: flex;
     flex-direction: row;
-    align-items: center;
+    flex-wrap: nowrap;
+    align-items: flex-end;
     flex-grow: 1;
 }
-.navbar nav a:hover{
-    border-top: 1px solid;
-    color: #0065FC;
+@media (max-width:800px){
+    .accomodation-activities{
+        
+    }
 }
-.navbar nav a{
-    padding: 15px;
-}
-nav a{
+.nav a{
     font-size: 0.9em;
     color: black;
     padding-top: 3px;
     text-decoration: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-size: normal;
+}
+.navbar nav a{
+    padding: 15px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin-left: 20px;
+}
+.navbar nav a:hover{
+    border-top: 1px solid;
+    color: #0065FC;
 }
 /*Main title*/
 .header{
@@ -180,18 +196,16 @@ h3{
 }
 .accomodations-in-Marseille{
     background-color: #F2F2F2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     border-radius: 20px;
-    padding: 44px 36px 44px 36px;
     max-width: 805px;
+    padding: 20px;
 }
 .container-item{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: 6px;
+    gap: 15px;
 }
 .box-card-link{
     flex-grow: 1;
@@ -268,10 +282,10 @@ h3{
     border: 3px solid white;
     border-radius: 20px;
     display: flex;
-    flex-flow: column wrap;
     background-color: white;
-    padding: 6px 58px 6px 6px;
     margin-bottom: 29px;
+    min-width: 275px;
+    gap:10px;
 }
 .popular-photos{
     width: 132px;
@@ -281,6 +295,13 @@ h3{
     border-bottom-left-radius: 10px;
 }
 .accomodations-popular-content{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 8px 0;
+}
+.accomodations-popular-content h5{
+    max-height: 100px;
     padding: 7px 0px 7px 20px;
     display: flex;
     flex-direction: column;
@@ -312,18 +333,23 @@ h3{
     font-size: large;
 }
 .cols{
-    flex-grow: 1;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
+    gap:15px;
     height: 100%;
+    
 }
-.col-1{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-.activitie-card{
+.col-1,.col-4{
     flex-grow: 1;
+    height: 100%;
+    max-width: 100%;
+}
+img{
+    max-width: 100%;
+    box-shadow: 0 0 20px #0000002e;
+    object-fit:cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 /* Footer */
