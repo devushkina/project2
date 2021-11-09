@@ -83,13 +83,12 @@ a{
     width: 54px;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .fa-map-marker-alt{
-    position: absolute;
     color: black;
-    top: 8px;
-    left: 8px;
-    transform: translate(8px, 8px); 
 }
 #search-section{
     display: flex;
@@ -151,6 +150,7 @@ a{
 }
 .filters-title p{
     font-weight: bold;
+    margin-bottom: 16px;
 }
 .fa-money-bill-wave,
 .fa-male,
@@ -178,9 +178,8 @@ h3{
 /*Accomodations in Marseille*/
 #accomodations{
     display: flex;
-    flex-direction: row;
+    flex-direction: column-reverse;
     flex-wrap: nowrap;
-    justify-content: space-between;
     margin-bottom: 56px;
     gap: 15px;
 }
@@ -268,7 +267,7 @@ h3{
     flex-flow: column wrap;
     border-radius: 20px;
     padding: 15px;
-    margin: 0 -15px;
+    margin: 0;
 }
 .most-popular-accomodations{
     display: flex;
@@ -332,7 +331,7 @@ h3{
 }
 .cols{
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: column nowrap;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     gap:15px;
@@ -343,24 +342,44 @@ h3{
     border-radius: 13px;
     box-shadow: 0 0 20px #0000002e;
 }
-.card.card-small{
-    margin-bottom: 15px;
-}
-.card-small.activitie-card{
-    height: 205px;
-    width: 100%;
-}
 .card.card-tall{
     display: flex;
     flex-direction: column;
-    height: 100%;
     box-shadow: 0 0 20px #0000002e;
     border-radius: 13px;
     overflow: hidden;
 }
-.card.card-tall.activitie-card{
+.card.card-small{
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-image.card-image-tall{
     flex-grow: 1;
+    height: 378px;
+    width: 320px;
    object-fit: cover;
+}
+.card-image.card-image-2{
+    height: 198px;
+    width: 322px;
+    object-fit: cover;
+}
+.card-image.card-image-3{
+    height: 97px;
+    width: 321px;
+    object-fit: cover;
+}
+.card-image.card-image-5{
+    height: 146px;
+    width: 317px;
+    object-fit: cover;
+}
+.card-image.card-image-6{
+    height: 146px;
+    width: 317px;
+    object-fit: cover;
 }
 img{
     max-width: 100%;
@@ -388,7 +407,25 @@ img{
 }
 .footer ul{
     display: block;
+    list-style: none;
 }
 .footer ul li {
     margin: 16px 0;
+}
+
+/* Larger screen */
+@media (min-width: 768px) {
+    #accomodations{
+        flex-direction:row;
+    }
+    .cols{
+        flex-direction: row;
+    }
+    .card-image{
+        height: auto;
+        object-fit: cover;
+    }
+    .card-image-tall{
+        flex-grow: 1;
+    }
 }
